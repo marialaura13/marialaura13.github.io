@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,98 +12,173 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="max-width">
+    <nav class="navbar" aria-label="Principal">
+      <div class="max-width navbar__inner">
         <div class="logo">
-          <a href="#">Maria<span> Fagundes</span></a>
+          <a href="#home">Maria Laura<span> Fagundes</span></a>
         </div>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#tl">Timeline</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#formacao">Formação</a></li>
           <li><a href="#cert">Certificados</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#projects">Projetos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
-        <div class="menu-btn">
+        <div class="menu-btn" aria-label="Abrir menu">
           <i class="fas fa-bars"></i>
         </div>
       </div>
     </nav>
 
-    <!--     HOME -->
+    <!-- HOME -->
     <section class="home" id="home">
-      <div class="max-width">
+      <div class="home__bg" aria-hidden="true"></div>
+      <div class="max-width home__layout">
         <div class="home-content">
-          <div class="text-1">Olá, meu nome é</div>
-          <div class="text-2">Maria Laura</div>
-          <div class="text-3">e eu sou <span> estudante </span> de G.T.I</div>
-          <a
-            href="https://drive.google.com/file/d/1dt99NisXv_K9pm29AfD14SvzCNphdNFv/view?usp=sharing"
-            target="_blank"
-            >Currículo</a
-          >
+          <p class="text-1">Olá, meu nome é</p>
+          <h1 class="text-2">Maria Laura</h1>
+          <p class="text-3">Software Engineer @FATECOINS | Digital Solutions Consultant @BASF</p>
+          <div class="home__actions">
+            <a
+              class="home__cta home__cta--primary"
+              href="https://drive.google.com/file/d/1dt99NisXv_K9pm29AfD14SvzCNphdNFv/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Currículo</a
+            >
+          </div>
+        </div>
+        <div class="home__visual" aria-hidden="true">
+          <div class="home__glow"></div>
+          <div class="home__panel">
+            <span class="home__monogram">ML</span>
+            <span class="home__panel-line"></span>
+            <span class="home__panel-line home__panel-line--short"></span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- TIMELINE SECTION -->
-    <section class="tl" id="tl">
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <section class="experience" id="experience">
       <div class="max-width">
-        <h2 class="title">Timeline</h2>
-        <div class="process-wrapper">
-          <div id="progress-bar-container">
-            <ul>
-              <li class="step step01 active">
-                <div class="step-inner">Etec</div>
-              </li>
-              <li class="step step02">
-                <div class="step-inner">fatec</div>
-              </li>
-              <li class="step step03">
-                <div class="step-inner">S.O.S</div>
-              </li>
-              
-            </ul>
+        <h2 class="title">Experiência</h2>
+        <p class="section-lead section-lead--experience">
+          Trajetória profissional em tecnologia.
+        </p>
+        <ol class="experience-timeline" aria-label="Experiências profissionais">
+          <li class="exp-item">
+            <span class="exp-marker" aria-hidden="true"></span>
+            <article class="exp-card">
+              <header class="exp-card__header">
+                <time class="exp-card__period" datetime="2022">2022 – Atual</time>
+                <h3 class="exp-card__company">
+                  Fatecoins
+                  <span class="exp-card__allocation">Alocada na BASF</span>
+                </h3>
+                <p class="exp-card__role">Analista de Sistemas</p>
+              </header>
+              <div class="exp-card__body">
+                <p>
+                  Atuação no time de Digitalização da BASF, sendo responsável pelo
+                  desenvolvimento, sustentação e evolução de soluções corporativas voltadas
+                  à otimização de processos industriais.
+                </p>
+                <p>
+                  Experiência com Work Tasks, SQL, JavaScript e CSS, atuando na
+                  implementação de melhorias, manutenção de sistemas, suporte técnico e
+                  atendimento às demandas das áreas de negócio, com foco em eficiência
+                  operacional e transformação digital.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="exp-item">
+            <span class="exp-marker" aria-hidden="true"></span>
+            <article class="exp-card">
+              <header class="exp-card__header">
+                <time class="exp-card__period">2021 – 2022</time>
+                <h3 class="exp-card__company">BASF</h3>
+                <p class="exp-card__role">Estagiária de TI</p>
+              </header>
+              <div class="exp-card__body">
+                <p>
+                  Atuação no suporte e desenvolvimento de aplicações internas voltadas aos
+                  processos de digitalização industrial.
+                </p>
+                <p>
+                  Apoio na manutenção de sistemas, atendimento aos usuários, correção de
+                  problemas e acompanhamento de demandas técnicas, adquirindo experiência
+                  prática em tecnologias como SQL, JavaScript, CSS e plataforma Work Tasks.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="exp-item">
+            <span class="exp-marker" aria-hidden="true"></span>
+            <article class="exp-card">
+              <header class="exp-card__header">
+                <time class="exp-card__period" datetime="2020-02/2021-02"
+                  >02/2020 – 02/2021</time
+                >
+                <h3 class="exp-card__company">S.O.S – Serviços de Obras Sociais</h3>
+                <p class="exp-card__role">Estagiária de Informática</p>
+              </header>
+              <div class="exp-card__body">
+                <p>
+                  Atuação como monitora de informática, responsável pela elaboração de
+                  cronogramas e aplicação de aulas de informática para crianças e
+                  adolescentes.
+                </p>
+                <p>
+                  Durante a pandemia, passei a atuar na área de Tecnologia da Informação da
+                  instituição: configuração e manutenção de computadores e impressoras,
+                  suporte técnico aos colaboradores e apoio na organização dos recursos
+                  tecnológicos.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-            <div id="line">
-              <div id="line-progress"></div>
-            </div>
-          </div>
-
-          <div id="progress-content-section">
-            <div class="section-content discovery active">
-              <h2>ETEC - Administração</h2>
+    <!-- FORMAÇÃO -->
+    <section class="formation" id="formacao">
+      <div class="max-width">
+        <h2 class="title">Formação</h2>
+        <p class="section-lead section-lead--formation">
+          Base acadêmica e técnica que sustenta a atuação em TI e gestão.
+        </p>
+        <div class="formation-grid">
+          <article class="formation-card">
+            <span class="formation-card__badge">Ensino técnico</span>
+            <h3 class="formation-card__title">ETEC – Administração</h3>
+            <p class="formation-card__institution">Etec de Guaratinguetá</p>
+            <p class="formation-card__year">Conclusão em 2018</p>
+            <div class="formation-card__body">
               <p>
-                Formei técnico em Administração na Etec de Guaratinguetá em 2018. 
-                Este curso foi muito importante para meu desenvolvimento e aprendizado, 
-                principalmente com as apresentações recorrentes de trabalhos e a 
-                convivência com pessoas de diferentes idades e pensamentos.
+                Formação técnica em Administração, com forte ênfase em apresentações,
+                trabalhos em grupo e convivência com perfis diversos — experiência que
+                contribuiu para comunicação e organização no ambiente profissional.
               </p>
             </div>
-
-            <div class="section-content strategy">
-              <h2>Fatec - Gestão da Tecnologia da Informação</h2>
+          </article>
+          <article class="formation-card">
+            <span class="formation-card__badge">Graduação</span>
+            <h3 class="formation-card__title">Fatec – Gestão da Tecnologia da Informação</h3>
+            <p class="formation-card__institution">Fatec de Guaratinguetá</p>
+            <p class="formation-card__year">Início em 2019</p>
+            <div class="formation-card__body">
               <p>
-                Iniciei o Ensino Superior em Gestão da Tecnologia da Informação (GTI) 
-                na Fatec de Guaratinguetá em 2019. Foi onde tive meu primeiro contato 
-                com a área de T.I, o que está sendo de grande satisfação e agregamento 
-                aos meus conhecimentos, vida acadêmica e pessoal.
+                Ensino superior em GTI, onde ocorreu o primeiro contato aprofundado com a
+                área de T.I — fundamentos que orientam a prática em sistemas, processos e
+                soluções digitais no dia a dia profissional.
               </p>
             </div>
-
-            <div class="section-content creative">
-              <h2>S.O.S - Serviços de Obras Sociais</h2>
-              <p>
-                Atualmente estou em meu primeiro estágio, uma entidade social da prefeitura 
-                de Lorena, com a função de monitora de informática. Começei em 02/2020, era 
-                responsável por elaborar cronograma de aulas de informática para crianças e 
-                adolescentes. Com a pandemia as atividades foram suspensas e agora sou 
-                responsável pela área de T.I (configuração e manutenção de computadores e 
-                impressoras) e suporte da entidade.
-              </p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -113,74 +188,193 @@
     <section class="cert" id="cert">
       <div class="max-width">
         <h2 class="title">Certificados</h2>
-        <div class="cert-content">
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-laptop-code"></i>
-              <div class="text">IT Essentials</div>
-              <p>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-card__icon-wrap">
+              <i class="fas fa-laptop-code" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-card__title">IT Essentials</h3>
+            <ul class="cert-card__tags" aria-label="Temas do certificado">
+              <li><span class="cert-tag">Hardware e Software</span></li>
+              <li><span class="cert-tag">CISCO</span></li>
+            </ul>
+            <p class="cert-card__text">
                 Curso de Hardware e Software - CISCO 
                 realizado em parelelo com uma matéria 
                 da faculdade
               </p>
-            </div>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="box">
-              <i class="fab fa-js-square"></i>
-              <div class="text">JavaScript</div>
-              <p>
+          <article class="cert-card">
+            <div class="cert-card__icon-wrap">
+              <i class="fab fa-js-square" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-card__title">JavaScript</h3>
+            <ul class="cert-card__tags" aria-label="Temas do certificado">
+              <li><span class="cert-tag">JavaScript</span></li>
+              <li><span class="cert-tag">freecodecamp</span></li>
+            </ul>
+            <p class="cert-card__text">
                 Curso com teoria e exercícios práticos de JavaScript, pelo site
                 "freecodecamp"
               </p>
-            </div>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="box">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <div class="text">HTML5 e CSS</div>
-              <p>
+          <article class="cert-card">
+            <div class="cert-card__icon-wrap cert-card__icon-wrap--dual">
+              <i class="fab fa-html5" aria-hidden="true"></i>
+              <i class="fab fa-css3-alt" aria-hidden="true"></i>
+            </div>
+            <h3 class="cert-card__title">HTML5 e CSS</h3>
+            <ul class="cert-card__tags" aria-label="Temas do certificado">
+              <li><span class="cert-tag">HTML5</span></li>
+              <li><span class="cert-tag">CSS3</span></li>
+            </ul>
+            <p class="cert-card__text">
                 Curso básico de HTML5 e CSS3 pelo Youtube, canal do "Curso em
                 vídeo"
               </p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- SKILLS SECTION -->
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" aria-labelledby="skills-heading">
       <div class="max-width">
-        <h2 class="title">Skills</h2>
-        <li>
-          <h3>HTML 5</h3>
-          <span class="bar"><span class="html"></span></span>
-        </li>
+        <h2 class="title" id="skills-heading">Habilidades</h2>
+        <p class="section-lead section-lead--skills">
+          Stack técnica, dados e BI alinhadas à atuação como
+          <strong>Analista de Sistemas</strong> — com ênfase em metodologias ágeis,
+          levantamento de requisitos e entrega de soluções corporativas.
+        </p>
 
-        <li>
-          <h3>CSS3</h3>
-          <span class="bar"><span class="css"></span></span>
-        </li>
+        <div class="skills-showcase">
+          <article class="skill-category" data-accent="frontend">
+            <header class="skill-category__head">
+              <div class="skill-category__titles">
+                <h3 class="skill-category__title">
+                  <i class="fas fa-laptop-code skill-category__title-icon" aria-hidden="true"></i>
+                  <span>Front-end</span>
+                </h3>
+                <p class="skill-category__subtitle">Interfaces e camada de apresentação</p>
+              </div>
+            </header>
+            <ul class="skill-pills" aria-label="Competências front-end">
+              <li>
+                <span class="skill-pill"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fab fa-angular" aria-hidden="true"></i> Angular</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fab fa-bootstrap" aria-hidden="true"></i> Bootstrap</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-shapes" aria-hidden="true"></i> Power Apps</span>
+              </li>
+            </ul>
+          </article>
 
-        <li>
-          <h3>JavaScript</h3>
-          <span class="bar"><span class="js"></span></span>
-        </li>
+          <article class="skill-category" data-accent="data">
+            <header class="skill-category__head">
+              <div class="skill-category__titles">
+                <h3 class="skill-category__title">
+                  <i class="fas fa-database skill-category__title-icon" aria-hidden="true"></i>
+                  <span>Banco de Dados &amp; BI</span>
+                </h3>
+                <p class="skill-category__subtitle">Modelagem, consultas e relatórios</p>
+              </div>
+            </header>
+            <ul class="skill-pills" aria-label="Competências em dados e BI">
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-server" aria-hidden="true"></i> SQL Server</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-database" aria-hidden="true"></i> MySQL</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-chart-pie" aria-hidden="true"></i> Power BI</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-file-alt" aria-hidden="true"></i> SSRS</span>
+              </li>
+            </ul>
+          </article>
 
-        <li>
-          <h3>Bootstrap</h3>
-          <span class="bar"><span class="boot"></span></span>
-        </li>
+          <article class="skill-category skill-category--wide" data-accent="process">
+            <header class="skill-category__head">
+              <div class="skill-category__titles">
+                <h3 class="skill-category__title">
+                  <i class="fas fa-sitemap skill-category__title-icon" aria-hidden="true"></i>
+                  <span>Metodologias &amp; Projetos</span>
+                </h3>
+                <p class="skill-category__subtitle">Análise, governança de demandas e melhoria contínua</p>
+              </div>
+            </header>
+            <ul class="skill-pills" aria-label="Competências em metodologias e projetos">
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-clipboard-list" aria-hidden="true"></i> Levantamento de requisitos</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-search-plus" aria-hidden="true"></i> Análise de sistemas</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-tasks" aria-hidden="true"></i> Gestão de demandas</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fas fa-sync-alt" aria-hidden="true"></i> Scrum</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-columns" aria-hidden="true"></i> Kanban</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-bolt" aria-hidden="true"></i> Metodologias ágeis</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-book" aria-hidden="true"></i> Documentação funcional</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fas fa-chart-line" aria-hidden="true"></i> Melhoria contínua</span>
+              </li>
+            </ul>
+          </article>
 
-        <li>
-          <h3>Scrum</h3>
-          <span class="bar"><span class="scrum"></span></span>
-        </li>
+          <article class="skill-category" data-accent="tools">
+            <header class="skill-category__head">
+              <div class="skill-category__titles">
+                <h3 class="skill-category__title">
+                  <i class="fas fa-toolbox skill-category__title-icon" aria-hidden="true"></i>
+                  <span>Ferramentas</span>
+                </h3>
+                <p class="skill-category__subtitle">Colaboração e ciclo de vida de software</p>
+              </div>
+            </header>
+            <ul class="skill-pills" aria-label="Ferramentas de trabalho">
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fab fa-microsoft" aria-hidden="true"></i> Azure DevOps</span>
+              </li>
+              <li>
+                <span class="skill-pill skill-pill--featured"><i class="fab fa-jira" aria-hidden="true"></i> Jira</span>
+              </li>
+              <li>
+                <span class="skill-pill"><i class="fab fa-trello" aria-hidden="true"></i> Trello</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="skills-legend" role="note">
+          <span class="skills-legend__dot" aria-hidden="true"></span>
+          Itens em destaque refletem o núcleo da atuação atual em sistemas, dados e gestão de entregas.
+        </p>
       </div>
     </section>
 
@@ -190,39 +384,51 @@
     <section class="pro" id="projects">
       <div class="max-width">
         <h2 class="title">Projetos</h2>
-        <div class="pro-content">
-          <div class="card">
-            <div class="box">
-              <a href="https://github.com/marialaura13/L-mpada" target="_blank">
+        <div class="pro-grid">
+          <article class="pro-card">
+            <a class="pro-card__link" href="https://github.com/marialaura13/L-mpada" target="_blank" rel="noopener noreferrer">
+              <div class="pro-card__icon" aria-hidden="true">
                 <i class="fas fa-lightbulb"></i>
-                <div class="text">Lâmpada</div>
-                <p>Criei uma lâmpada que liga e desliga, usando Html e CSS.</p>
-              </a>
-            </div>
-          </div>
+              </div>
+              <h3 class="pro-card__title">Lâmpada</h3>
+              <p class="pro-card__text">Criei uma lâmpada que liga e desliga, usando Html e CSS.</p>
+              <ul class="pro-card__tags" aria-label="Tecnologias">
+                <li><span class="pro-tag">HTML</span></li>
+                <li><span class="pro-tag">CSS</span></li>
+              </ul>
+            </a>
+          </article>
 
-          <div class="card">
-            <div class="box">
-              <a href="https://github.com/marialaura13/calculator" target="_blank">
+          <article class="pro-card">
+            <a class="pro-card__link" href="https://github.com/marialaura13/calculator" target="_blank" rel="noopener noreferrer">
+              <div class="pro-card__icon" aria-hidden="true">
                 <i class="fas fa-calculator"></i>
-                <div class="text">Calculadora</div>
-                <p>Criei uma calculadora de botões, usando Html e Css</p>
-              </a>
-            </div>
-          </div>
+              </div>
+              <h3 class="pro-card__title">Calculadora</h3>
+              <p class="pro-card__text">Criei uma calculadora de botões, usando Html e Css</p>
+              <ul class="pro-card__tags" aria-label="Tecnologias">
+                <li><span class="pro-tag">HTML</span></li>
+                <li><span class="pro-tag">CSS</span></li>
+              </ul>
+            </a>
+          </article>
 
-          <div class="card">
-            <div class="box">
-              <a href="https://github.com/marialaura13/calculadoralanche" target="_blank">
+          <article class="pro-card">
+            <a class="pro-card__link" href="https://github.com/marialaura13/calculadoralanche" target="_blank" rel="noopener noreferrer">
+              <div class="pro-card__icon" aria-hidden="true">
                 <i class="fas fa-hamburger"></i>
-                <div class="text">Calculadora de lanche</div>
-                <p>
+              </div>
+              <h3 class="pro-card__title">Calculadora de lanche</h3>
+              <p class="pro-card__text">
                   Adaptei a calculadora que já havia criado para meu primo, 
                   que precisava de um método rápido para seu novo negócio
                 </p>
-              </a>
-            </div>
-          </div>
+              <ul class="pro-card__tags" aria-label="Tecnologias">
+                <li><span class="pro-tag">HTML</span></li>
+                <li><span class="pro-tag">CSS</span></li>
+              </ul>
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -232,76 +438,49 @@
       <div class="max-width">
         <h2 class="title">Contatos</h2>
         <div class="contact-content">
-          <div class="column left">
-            <div class="text">Entre em contato</div>
+          <div class="column left contact-panel">
+            <h3 class="contact-panel__title">Entre em contato</h3>
             <div class="icons">
               <div class="row">
                 <a
-                  class="fb"
-                  href="https://www.facebook.com/marialaurafagundes.87452469"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-square"></i>
-                  <div class="info">
-                    <div class="head">Facebook</div>
-                    <div class="sub-title">/marialaurafagundes.87452469</div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="row">
-                <a
-                  class="git"
+                  class="contact-link contact-link--github git"
                   href="https://github.com/marialaura13"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-github"></i>
+                  <span class="contact-link__icon"><i class="fab fa-github" aria-hidden="true"></i></span>
                   <div class="info">
                     <div class="head">Github</div>
                     <div class="sub-title">/marialaura13</div>
                   </div>
+                  <i class="fas fa-external-link-alt contact-link__arrow" aria-hidden="true"></i>
                 </a>
               </div>
 
               <div class="row">
                 <a
-                  class="link"
+                  class="contact-link contact-link--linkedin link"
                   href="https://www.linkedin.com/in/maria-laura-fagundes-857931192"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-linkedin"></i>
-
+                  <span class="contact-link__icon"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
                   <div class="info">
                     <div class="head">LinkeIn</div>
                     <div class="sub-title">/maria-laura-fagundes-857931192</div>
                   </div>
-                </a>
-              </div>
-
-              <div class="row">
-                <a
-                  class="whats"
-                  href="https://api.whatsapp.com/send?phone=5512997150998"
-                  target="_blank"
-                >
-                  <i class="fab fa-whatsapp-square"></i>
-                  <div class="info">
-                    <div class="head">Whatsapp</div>
-                    <div class="sub-title">Clique aqui</div>
-                  </div>
+                  <i class="fas fa-external-link-alt contact-link__arrow" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
           </div>
-          <div class="column right">
-            <div class="text">Envie um e-mail</div>
-            <div id="contact">
+          <div class="column right contact-panel">
+            <h3 class="contact-panel__title">Envie um e-mail</h3>
+            <div id="contact-form" class="contact-form">
               <div class="fields">
                 <div class="field name" id="name">
                   <input type="text" placeholder="Nome" name="name" required />
                 </div>
-
-                
               </div>
               <div class="field" id="title">
                 <input type="text" placeholder="Título" name="title" required />
@@ -317,17 +496,19 @@
               </div>
 
               <div class="button">
-                <button onclick="openEmailLink()">Enviar email</button>
+                <button type="button" onclick="openEmailLink()">Enviar email</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- FOOTER SECTION -->
+    <!-- FOOTER -->
 
-    <footer>
-      <span>Created By <a href="#">Maria Laura</a></span>
+    <footer class="site-footer">
+      <div class="max-width site-footer__inner">
+        <span>Created By <a href="#home">Maria Laura</a></span>
+      </div>
     </footer>
 
     <script src="script.js"></script>
