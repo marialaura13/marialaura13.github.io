@@ -9,6 +9,13 @@ html {
   scroll-behavior: smooth;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Safari iOS rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Evita zoom automático no iPhone */
+  font-size: 16px;
 }
 
 :root {
@@ -30,6 +37,21 @@ body {
   color: var(--color-ink);
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
+  /* Safari iOS fixes */
+  -webkit-touch-callout: none;
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Smooth scrolling em iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Evita zoom automático */
+  font-size: 16px;
+  /* Garante que texto não quebre weirdly em Safari */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  /* Melhor renderização */
+  -webkit-font-smoothing: antialiased;
 }
 .max-width {
   max-width: 1300px;
@@ -515,6 +537,13 @@ section:not(.home) {
   border-radius: 8px;
   margin-bottom: 12px;
   white-space: nowrap;
+  /* Safari iOS fix para cor uniforme */
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #00bfff;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 .exp-card__company {
@@ -824,11 +853,15 @@ section:not(.home) {
 
 .skills .title {
   font-family: "Ubuntu", sans-serif;
+  margin-bottom: 140px;
 }
 
 .skills .title::after {
   content: "Stack & processos";
   background: #f8fafc;
+  position: absolute;
+  bottom: -24px;
+  z-index: 1;
 }
 
 .section-lead--skills {
@@ -1915,5 +1948,285 @@ input[type="submit"],
 
   .home:hover .home__panel {
     transform: none;
+  }
+}
+
+/* ========== iOS/Safari Specific Fixes ========== */
+
+/* Webkit rendering optimizations */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Previne double tap zoom no iOS */
+input,
+select,
+button,
+textarea {
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  /* Webkit fixes */
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00bfff;
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.15);
+}
+
+/* Webkit specific button styles */
+button,
+[role="button"],
+a[href] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  /* Evita auto-zoom em iOS */
+  font-size: 16px;
+}
+
+/* Fix para link color no iOS */
+a {
+  color: inherit;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* Skills section specific fixes */
+.skills {
+  position: relative;
+}
+
+.skills-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 24px;
+  align-items: stretch;
+}
+
+.skill-category {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-category::before {
+  z-index: 0;
+}
+
+/* Previne overflow em small screens */
+@media (max-width: 600px) {
+  .skills-showcase {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .skill-category {
+    overflow: hidden;
+  }
+
+  .skill-category__title {
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  }
+
+  .skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Webkit iOS specific text rendering */
+  .skill-category__title,
+  .skill-category__subtitle,
+  .skill-pill {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* iOS specific navbar fixes */
+@media (max-width: 947px) {
+  .navbar .menu {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+
+  .navbar .menu li a {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    /* Webkit rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Experience card fixes for iOS */
+.exp-card {
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.exp-card__company {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Date badge specific fix */
+.exp-card__period {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formation cards webkit fixes */
+.formation-card {
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.formation-card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Contact form fixes for iOS */
+.contact-form .field input {
+  /* Evita zoom ao focar em iOS */
+  font-size: 16px;
+  /* Webkit appearance reset */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contact-form .field input:autofill,
+.contact-form .field input:autofill:hover,
+.contact-form .field input:autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fafbfc inset !important;
+  box-shadow: 0 0 0 1000px #fafbfc inset !important;
+  -webkit-text-fill-color: #0f172a !important;
+  color: #0f172a !important;
+}
+
+/* Home section gradient fix for iOS */
+.home .text-2 {
+  /* Webkit specific rendering */
+  -webkit-user-select: none;
+  user-select: none;
+  /* Garante que não herde background-clip */
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Smooth scrolling for momentum scrolling */
+.max-width,
+section,
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe area insets for notched iPhones */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-left: max(22px, env(safe-area-inset-left));
+    padding-right: max(22px, env(safe-area-inset-right));
+    padding-top: max(22px, env(safe-area-inset-top));
+  }
+
+  .navbar.sticky {
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+
+  .max-width {
+    padding-left: max(80px, env(safe-area-inset-left));
+    padding-right: max(80px, env(safe-area-inset-right));
+  }
+
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .site-footer {
+    padding-bottom: max(22px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Responsivo para telas muito pequenas (iPhone SE) */
+@media (max-width: 375px) {
+  .max-width {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section .title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .home .text-2 {
+    font-size: 2rem;
+  }
+
+  .home .text-3 {
+    font-size: 0.9rem;
+  }
+
+  .section-lead {
+    font-size: 13px;
+  }
+
+  .navbar .logo a {
+    font-size: 1.1rem;
+  }
+
+  .exp-card,
+  .formation-card,
+  .cert-card {
+    padding: 16px 12px;
+  }
+
+  .skill-pill {
+    font-size: 11px;
+    padding: 8px 12px;
   }
 }

@@ -12,6 +12,12 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".menu-btn i").toggleClass("active");
   });
+
+  // Close menu when clicking on a link (iOS)
+  $(".navbar .menu li a").click(function () {
+    $(".navbar .menu").removeClass("active");
+    $(".menu-btn i").removeClass("active");
+  });
 });
 
 let emailLink =
@@ -45,7 +51,7 @@ const openEmailLink = () => {
   window.open(emailLink);
 };
 
-// PWA Service Worker Registration
+// PWA Service Worker Registration with iOS fallback
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').then(registration => {
     console.log('Service Worker registrado com sucesso:', registration);
@@ -53,6 +59,34 @@ if ('serviceWorker' in navigator) {
     console.log('Erro ao registrar Service Worker:', error);
   });
 }
+
+// iOS specific optimizations
+document.addEventListener('DOMContentLoaded', function() {
+  // Prevent double tap zoom on iOS
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', function(event) {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, false);
+
+  // Fix viewport on iOS for notched devices
+  const viewportMeta = document.querySelector('meta[name="viewport"]');
+  if (viewportMeta) {
+    // Ensure viewport is properly set
+    viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no');
+  }
+
+  // iOS 15+ status bar color fix
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
+    document.documentElement.style.setProperty('--safe-area-inset-top', 'env(safe-area-inset-top)');
+    document.documentElement.style.setProperty('--safe-area-inset-bottom', 'env(safe-area-inset-bottom)');
+    document.documentElement.style.setProperty('--safe-area-inset-left', 'env(safe-area-inset-left)');
+    document.documentElement.style.setProperty('--safe-area-inset-right', 'env(safe-area-inset-right)');
+  }
+});
 
 // Enable install prompt
 let deferredPrompt;
