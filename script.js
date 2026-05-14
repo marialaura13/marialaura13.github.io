@@ -44,3 +44,24 @@ if (title && name && message) {
 const openEmailLink = () => {
   window.open(emailLink);
 };
+
+// PWA Service Worker Registration
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(registration => {
+    console.log('Service Worker registrado com sucesso:', registration);
+  }).catch(error => {
+    console.log('Erro ao registrar Service Worker:', error);
+  });
+}
+
+// Enable install prompt
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
+window.addEventListener('appinstalled', () => {
+  console.log('App instalado com sucesso!');
+  deferredPrompt = null;
+});

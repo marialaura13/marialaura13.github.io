@@ -7,6 +7,8 @@
 }
 html {
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 :root {
@@ -26,6 +28,8 @@ html {
 body {
   background: #fff;
   color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 .max-width {
   max-width: 1300px;
@@ -510,6 +514,7 @@ section:not(.home) {
   padding: 6px 12px;
   border-radius: 8px;
   margin-bottom: 12px;
+  white-space: nowrap;
 }
 
 .exp-card__company {
@@ -571,6 +576,14 @@ section:not(.home) {
   gap: 28px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.formation-card:first-child {
+  order: 2;
+}
+
+.formation-card:nth-child(2) {
+  order: 1;
 }
 
 .formation-card {
@@ -1061,6 +1074,10 @@ section:not(.home) {
     padding-bottom: 72px;
   }
 
+  .skills .title {
+    margin-bottom: 120px;
+  }
+
   .skill-category {
     padding: 18px 16px 16px;
     border-radius: 16px;
@@ -1491,10 +1508,54 @@ section:not(.home) {
   color: var(--color-accent);
   font-weight: 600;
   transition: opacity 0.2s ease;
+  -webkit-user-select: auto;
+  user-select: auto;
 }
 
 .site-footer span a:hover {
   opacity: 0.85;
+}
+
+/* Mobile App Experience - Touch optimizations */
+input,
+button,
+a,
+label {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* Improve touch targets */
+button,
+a[href],
+input[type="button"],
+input[type="submit"],
+.contact-link,
+.home__cta {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Safe area for notched devices */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-left: max(22px, env(safe-area-inset-left));
+    padding-right: max(22px, env(safe-area-inset-right));
+  }
+
+  .max-width {
+    padding-left: max(80px, env(safe-area-inset-left));
+    padding-right: max(80px, env(safe-area-inset-right));
+  }
+
+  .site-footer__inner {
+    padding-left: max(80px, env(safe-area-inset-left));
+    padding-right: max(80px, env(safe-area-inset-right));
+  }
+
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 /* MEDIA */
@@ -1553,6 +1614,22 @@ section:not(.home) {
   .site-footer__inner {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  /* Tablet touch optimizations */
+  .home__cta {
+    min-height: 48px;
+    padding: 16px 32px;
+  }
+
+  .contact-link {
+    min-height: 56px;
+    gap: 14px;
+  }
+
+  .skill-pill {
+    padding: 10px 14px;
+    min-height: 40px;
   }
 }
 
@@ -1613,6 +1690,13 @@ section:not(.home) {
     padding: 0 23px;
   }
 
+  @supports (padding: max(0px)) {
+    .max-width {
+      padding-left: max(23px, env(safe-area-inset-left));
+      padding-right: max(23px, env(safe-area-inset-right));
+    }
+  }
+
   .section-lead {
     margin: -36px auto 32px;
     font-size: 15px;
@@ -1630,8 +1714,82 @@ section:not(.home) {
     padding: 22px 18px 20px;
   }
 
+  /* Mobile touch-friendly improvements */
+  .navbar .menu li a {
+    padding: 10px 8px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .home__cta {
+    padding: 16px 36px;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .contact-link {
+    min-height: 60px;
+    padding: 14px 16px;
+  }
+
+  .contact-link__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-form .field input {
+    min-height: 52px;
+    font-size: 16px;
+  }
+
+  .contact-form .button button {
+    min-height: 48px;
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .skill-pill {
+    padding: 10px 14px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
   .site-footer__inner {
     padding: 18px 23px;
+  }
+
+  @supports (padding: max(0px)) {
+    .site-footer__inner {
+      padding: 18px max(23px, env(safe-area-inset-left)) 18px max(23px, env(safe-area-inset-right));
+      padding-bottom: calc(18px + env(safe-area-inset-bottom));
+    }
+  }
+
+  /* App-like appearance */
+  body {
+    padding-top: 0;
+  }
+
+  section:not(.home) {
+    padding: 80px 0;
+  }
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  /* Improved spacing for mobile sections */
+  .experience .title,
+  .formation .title,
+  .skills .title,
+  .cert .title,
+  .pro .title,
+  .contact .title {
+    margin-bottom: 60px;
   }
 }
 
@@ -1653,6 +1811,81 @@ section:not(.home) {
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+  }
+
+  /* Extra mobile optimizations */
+  .max-width {
+    padding: 0 16px;
+  }
+
+  .navbar .menu li a {
+    margin: 20px 0;
+    font-size: 18px;
+    min-height: 48px;
+  }
+
+  .home .text-2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .home .text-3 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+
+  section .title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  .section-lead {
+    font-size: 14px;
+    margin: -30px auto 28px;
+  }
+
+  .home__cta {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+
+  .exp-card {
+    padding: 18px 14px 18px;
+  }
+
+  .formation-grid {
+    gap: 20px;
+  }
+
+  .formation-card {
+    padding: 20px 16px 22px;
+  }
+
+  .cert-card {
+    padding: 20px 16px 18px;
+  }
+
+  .skill-category {
+    padding: 16px 14px 14px;
+    border-radius: 14px;
+  }
+
+  .contact-form .field input {
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .contact-form .button button {
+    width: 100%;
+    min-height: 48px;
+    font-size: 15px;
+  }
+
+  .site-footer__inner {
+    padding: 16px;
+  }
+
+  /* Improve navbar for small screens */
+  .navbar .logo a {
+    font-size: 1.2rem;
   }
 }
 
