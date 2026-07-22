@@ -9,6 +9,10 @@
     navSkills: "Habilidades",
     navProjects: "Projetos",
     navContact: "Contato",
+    languageSelectorLabel: "Selecionar idioma",
+    menuOpenLabel: "Abrir menu",
+    menuCloseLabel: "Fechar menu",
+    mainMenuLabel: "Menu principal",
     heroIntro: "Olá, meu nome é",
     heroName: "Maria Laura",
     heroSummary: "Profissional de tecnologia com experiência em Transformação Digital, Automação de Processos e desenvolvimento de soluções corporativas. Atuo conectando negócio e tecnologia utilizando metodologias ágeis, análise de dados, implantação de soluções e melhoria contínua.",
@@ -141,20 +145,23 @@
     skillContinuousLearning: "Aprendizado contínuo",
     sectionProjectsEyebrow: "Projetos",
     sectionProjects: "Trabalhos práticos",
-    sectionProjectsLead: "Projetos com descrição curta, tecnologias e links diretos.",
-    proj1Title: "Lâmpada",
-    proj1Desc: "Protótipo de lâmpada interativa construído com HTML e CSS.",
-    proj2Title: "Calculadora",
-    proj2Desc: "Calculadora funcional com interface responsiva em HTML e CSS.",
-    proj3Title: "Calculadora de lanche",
-    proj3Desc: "Adaptação para controle rápido de pedidos de um novo negócio.",
-    projectView: "Ver projeto",
+    sectionProjectsLead: "Aplicações e sites desenvolvidos para necessidades reais.",
+    proj1Title: "Site comercial Studio de Estética",
+    proj2Title: "Projeto E Aí, Cidadão",
+    proj3Title: "Site comercial Dentista",
+    proj4Title: "Rastreamento de amostras",
+    proj4Desc: "Aplicação para rastreamento de amostras de materiais em ambiente industrial, com gerenciamento do ciclo de vida das amostras, geração e impressão de etiquetas de identificação, proporcionando maior controle, rastreabilidade e agilidade nos processos.",
+    proj5Title: "Controle de Envasamento",
+    proj5Desc: "Sistema para apoio ao processo de envasamento de produtos, reunindo informações essenciais do produto e validações de segurança em uma única interface. A solução reduziu o tempo de execução das conferências, minimizou erros de preenchimento e contribuiu para maior padronização e segurança operacional.",
+    proj6Title: "Checklists Operacionais Digitais",
+    proj6Desc: "Conjunto de mais de 100 checklists digitais voltados à padronização de processos industriais. O projeto envolveu a criação e evolução contínua de formulários utilizados por equipes multiculturais, com foco em usabilidade, validações, padronização de processos e ganho de eficiência operacional.",
+    projectView: "Ver aplicação",
     sectionContactEyebrow: "Contato",
     sectionContact: "Vamos conversar?",
     sectionContactLead: "Conecte-se por LinkedIn, GitHub ou e-mail.",
     contactEmailLabel: "E-mail",
     contactEmailButton: "Enviar e-mail",
-    footer: "Criado por Maria Laura",
+    footer: "Criado por Maria Laura Fagundes",
     toggleMore: "Ver mais",
     toggleLess: "Ver menos"
   },
@@ -168,6 +175,10 @@
     navSkills: "Skills",
     navProjects: "Projects",
     navContact: "Contact",
+    languageSelectorLabel: "Select language",
+    menuOpenLabel: "Open menu",
+    menuCloseLabel: "Close menu",
+    mainMenuLabel: "Main menu",
     heroIntro: "Hello, I'm",
     heroName: "Maria Laura",
     heroSummary: "Technology professional with experience in Digital Transformation, Process Automation, and corporate solution development. I connect business and technology using agile methodologies, data analysis, solution implementation, and continuous improvement.",
@@ -186,7 +197,20 @@
     exp1Desc2: "Requirements gathering, process mapping and factory visits to understand operations.",
     exp1Desc3: "Project planning, Product Backlog creation and refinement, and demand management.",
     exp1Desc4: "Agile delivery with Scrum, leading Sprint Planning, Sprint Review and delivery follow-up.",
-    exp1Desc5: "Application development with Angular, JavaScript, Java, SQL, Power Platform, Power BI, SAP and N2/N3 support.",
+    exp1Desc5: "Experience working as a Tech Lead, Scrum Master, and Product Owner (PO).",
+    exp1Desc6: "Application development using Angular, JavaScript, Java, and SQL.",
+    exp1Desc7: "Solution development with Microsoft Power Platform (Power Apps and Power Automate).",
+    exp1Desc8: "Dashboard creation and data analysis with Power BI and Report Builder (SSRS).",
+    exp1Desc9: "Solution development using AVEVA Work Tasks and Augmentir.",
+    exp1Desc10: "Integration of corporate applications with SAP.",
+    exp1Desc11: "Label and form development using ZebraDesigner.",
+    exp1Desc12: "Data analysis, testing, user acceptance testing, deployment, and continuous system improvement.",
+    exp1Desc13: "Preparation of technical and functional documentation for users.",
+    exp1Desc14: "Delivery of training and enablement sessions for end users.",
+    exp1Desc15: "Level 2 and Level 3 technical support for corporate applications.",
+    exp1Desc16: "Presentation of results and solutions to stakeholders and management.",
+    exp1Desc17: "Work on international projects in collaboration with multicultural teams.",
+    exp1Desc18: "Experience in a Smart Manufacturing environment at BASF, a global chemical company.",
     exp2Period: "2021 – 2022",
     exp2Company: "BASF",
     exp2Role: "Project Intern",
@@ -194,7 +218,15 @@
     exp2Desc2: "Development of Industry 4.0 solutions and operations digitization.",
     exp2Desc3: "Requirements gathering and process understanding with end users.",
     exp2Desc4: "Application development and maintenance with Skelta BPM, JavaScript and SQL Server.",
-    exp2Desc5: "Systems integration, automation and task management using Azure DevOps.",
+    exp2Desc5: "Systems integration and process automation.",
+    exp2Desc6: "Participation in projects using Agile Methodologies (Scrum and Kanban).",
+    exp2Desc7: "Use of Azure DevOps for activity management and sprint tracking.",
+    exp2Desc8: "Creation and maintenance of SQL Server queries.",
+    exp2Desc9: "Support for application testing, user acceptance testing, and deployment.",
+    exp2Desc10: "Preparation of technical documentation and user guides.",
+    exp2Desc11: "User support and incident resolution.",
+    exp2Desc12: "Participation in meetings with multidisciplinary teams and project delivery tracking.",
+    exp2Desc13: "Experience in an industrial environment, contributing to Smart Manufacturing initiatives at BASF.",
     exp3Period: "2020 – 2021",
     exp3Company: "S.O.S. – Serviços de Obras Sociais",
     exp3Role: "Computer Lab Intern",
@@ -202,7 +234,10 @@
     exp3Desc2: "Teaching Office applications, internet navigation, file management and digital best practices.",
     exp3Desc3: "Planning activities adapted for different age groups.",
     exp3Desc4: "Level 1 technical support and lab maintenance.",
-    exp3Desc5: "Ensuring equipment availability for educational activities.",
+    exp3Desc5: "Basic installation and configuration of computers, peripherals, and applications.",
+    exp3Desc6: "Support in maintaining the computer lab and ensuring equipment availability for educational activities.",
+    exp3Desc7: "User assistance, support, and guidance on the use of technology resources.",
+    exp3Desc8: "Development of communication, teaching, problem-solving, and user support skills.",
     sectionEducationEyebrow: "Education",
     sectionEducation: "Academic foundation",
     sectionEducationLead: "Training that supports practice in IT and management.",
@@ -276,20 +311,23 @@
     skillContinuousLearning: "Continuous Learning",
     sectionProjectsEyebrow: "Projects",
     sectionProjects: "Practical work",
-    sectionProjectsLead: "Projects with short descriptions, technologies and direct links.",
-    proj1Title: "Lamp",
-    proj1Desc: "Interactive lamp prototype built with HTML and CSS.",
-    proj2Title: "Calculator",
-    proj2Desc: "Functional calculator with responsive interface in HTML and CSS.",
-    proj3Title: "Snack calculator",
-    proj3Desc: "Adapted project for quick order control in a new business.",
-    projectView: "View project",
+    sectionProjectsLead: "Applications and websites developed to meet real-world needs.",
+    proj1Title: "Beauty Studio Business Website",
+    proj2Title: "E Aí, Cidadão Project",
+    proj3Title: "Dental Practice Business Website",
+    proj4Title: "Sample Tracking",
+    proj4Desc: "An application for tracking material samples in an industrial environment, featuring sample lifecycle management and identification label generation and printing to provide greater control, traceability, and process agility.",
+    proj5Title: "Filling Process Control",
+    proj5Desc: "A system designed to support product filling operations by bringing essential product information and safety validations together in a single interface. The solution reduced verification time, minimized data entry errors, and contributed to greater standardization and operational safety.",
+    proj6Title: "Digital Operational Checklists",
+    proj6Desc: "A collection of more than 100 digital checklists designed to standardize industrial processes. The project involved the creation and continuous improvement of forms used by multicultural teams, focusing on usability, validations, process standardization, and increased operational efficiency.",
+    projectView: "View application",
     sectionContactEyebrow: "Contact",
     sectionContact: "Let’s talk?",
     sectionContactLead: "Connect via LinkedIn, GitHub or email.",
     contactEmailLabel: "E-mail",
     contactEmailButton: "Send email",
-    footer: "Created by Maria Laura",
+    footer: "Created by Maria Laura Fagundes",
     toggleMore: "See more",
     toggleLess: "See less"
   }
@@ -302,6 +340,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navPanel = document.querySelector(".nav-panel");
 const navLinks = document.querySelectorAll(".nav-list a");
 const translationElements = document.querySelectorAll("[data-i18n]");
+const translatedAriaElements = document.querySelectorAll("[data-i18n-aria-label]");
 const expCards = document.querySelectorAll(".exp-card[data-expandable]");
 
 const saveLanguage = (lang) => localStorage.setItem(storageKey, lang);
@@ -328,6 +367,14 @@ const translatePage = (lang) => {
     if (text !== undefined) element.textContent = text;
   });
 
+  translatedAriaElements.forEach((element) => {
+    const defaultKey = element.dataset.i18nAriaLabel;
+    const openKey = element.dataset.i18nAriaLabelOpen;
+    const key = openKey && element.getAttribute("aria-expanded") === "true" ? openKey : defaultKey;
+    const text = translations[lang][key];
+    if (text !== undefined) element.setAttribute("aria-label", text);
+  });
+
   expCards.forEach((card) => {
     const toggle = card.querySelector(".exp-toggle");
     if (!toggle) return;
@@ -342,11 +389,15 @@ const translatePage = (lang) => {
 const toggleNav = () => {
   const isOpen = navPanel.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  const lang = getSavedLanguage();
+  menuToggle.setAttribute("aria-label", translations[lang][isOpen ? "menuCloseLabel" : "menuOpenLabel"]);
 };
 
 const closeNav = () => {
   navPanel.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
+  const lang = getSavedLanguage();
+  menuToggle.setAttribute("aria-label", translations[lang].menuOpenLabel);
 };
 
 const toggleCard = (card) => {
