@@ -413,7 +413,7 @@ main {
 }
 
 .exp-card.expanded .exp-list {
-  max-height: 1000px;
+  max-height: none;
 }
 
 .exp-list li {
