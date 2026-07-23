@@ -1,7 +1,7 @@
 ﻿const translations = {
   pt: {
     pageTitle: "Portfólio Maria Laura",
-    brandRole: "Analista de Sistemas",
+    brandRole: "Analista",
     navHome: "Home",
     navExperience: "Experiência",
     navEducation: "Formação",
@@ -167,7 +167,7 @@
   },
   en: {
     pageTitle: "Maria Laura Portfolio",
-    brandRole: "Systems Analyst",
+    brandRole: "Analyst",
     navHome: "Home",
     navExperience: "Experience",
     navEducation: "Education",
