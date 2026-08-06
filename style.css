@@ -366,12 +366,15 @@ main {
 }
 
 .exp-card-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, auto);
   gap: 1rem;
-  flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 1rem;
+}
+
+.exp-card-header > div {
+  min-width: 0;
 }
 
 .exp-card-period,
@@ -385,7 +388,7 @@ main {
   font-size: 0.92rem;
 }
 
-.exp-card-company,
+.exp-card-title,
 .info-title,
 .cert-title,
 .skill-card-title,
@@ -395,10 +398,25 @@ main {
   font-size: 1.1rem;
 }
 
-.exp-card-role {
+.exp-card-employer {
+  justify-self: end;
   color: var(--accent);
   font-weight: 600;
+  text-align: right;
   white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .exp-card-header {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .exp-card-employer {
+    justify-self: start;
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .exp-list {
