@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0F172A" />
-    <meta name="description" content="Portfólio profissional de Maria Laura Fagundes - Analista de Sistemas e Software Engineer" />
+    <meta name="description" content="Portfólio profissional de Maria Laura Fagundes - Analista de Sistemas" />
     <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="apple-touch-icon" href="images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,15 +78,15 @@
         </div>
 
         <div class="cards-grid max-width">
-          <article class="exp-card" data-expandable="true" tabindex="0" role="button" aria-expanded="false">
+          <article class="exp-card exp-card-current" data-expandable="true">
             <div class="exp-card-header">
               <div>
                 <p class="exp-card-period" data-i18n="exp1Period">2022 – Atual</p>
                 <h3 class="exp-card-company" data-i18n="exp1Company">Fatecoins (alocada na BASF)</h3>
               </div>
-              <span class="exp-card-role" data-i18n="exp1Role">Engenheira de software</span>
+              <span class="exp-card-role" data-i18n="exp1Role">Analista de Sistemas</span>
             </div>
-            <ul class="exp-list">
+            <ul class="exp-list" id="exp1-details">
               <li data-i18n="exp1Desc1">Desenvolvimento de soluções para Transformação Digital e Automação de Processos Industriais.</li>
               <li data-i18n="exp1Desc2">Levantamento de requisitos, mapeamento de processos e visitas a plantas produtivas para entendimento da operação.</li>
               <li data-i18n="exp1Desc3">Planejamento de projetos, criação e refinamento de Product Backlog e gestão de demandas.</li>
@@ -106,18 +106,20 @@
               <li data-i18n="exp1Desc17">Atuação em projetos internacionais, colaborando com equipes multiculturais.</li>
               <li data-i18n="exp1Desc18">Experiência em ambiente de Manufatura Inteligente (Smart Manufacturing) na indústria química global BASF.</li>
             </ul>
-            <button class="exp-toggle" type="button" aria-expanded="false" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp1-details" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
           </article>
 
-          <article class="exp-card" data-expandable="true" tabindex="0" role="button" aria-expanded="false">
+          <article class="exp-card exp-card-basf" data-expandable="true">
             <div class="exp-card-header">
               <div>
-                <p class="exp-card-period" data-i18n="exp2Period">2021 – 2022</p>
+                <p class="exp-card-period" data-i18n="exp2Period">2021 – Atual</p>
                 <h3 class="exp-card-company" data-i18n="exp2Company">BASF</h3>
               </div>
-              <span class="exp-card-role" data-i18n="exp2Role">Estagiária de projetos</span>
+              <span class="exp-card-role" data-i18n="exp2Role">Trajetória na BASF</span>
             </div>
-            <ul class="exp-list">
+            <ul class="exp-list" id="exp2-details">
+              <li class="role-milestone role-milestone-current" data-i18n="exp2StageCurrent">2022 – Atual · Analista de Sistemas pela Fatecoins, alocada na BASF</li>
+              <li class="role-milestone" data-i18n="exp2StageIntern">2021 – 2022 · Estagiária de projetos</li>
               <li data-i18n="exp2Desc1">Apoio em projetos de Transformação Digital e Automação de Processos Industriais.</li>
               <li data-i18n="exp2Desc2">Desenvolvimento de soluções voltadas à Indústria 4.0 e digitalização de operações.</li>
               <li data-i18n="exp2Desc3">Levantamento de requisitos e entendimento de processos junto aos usuários.</li>
@@ -132,10 +134,10 @@
               <li data-i18n="exp2Desc12">Participação em reuniões com equipes multidisciplinares e acompanhamento das entregas dos projetos.</li>
               <li data-i18n="exp2Desc13">Vivência em ambiente industrial, colaborando em iniciativas de Smart Manufacturing na BASF.</li>
             </ul>
-            <button class="exp-toggle" type="button" aria-expanded="false" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp2-details" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
           </article>
 
-          <article class="exp-card" data-expandable="true" tabindex="0" role="button" aria-expanded="false">
+          <article class="exp-card" data-expandable="true">
             <div class="exp-card-header">
               <div>
                 <p class="exp-card-period" data-i18n="exp3Period">2020 – 2021</p>
@@ -143,7 +145,7 @@
               </div>
               <span class="exp-card-role" data-i18n="exp3Role">Monitoria em informática</span>
             </div>
-            <ul class="exp-list">
+            <ul class="exp-list" id="exp3-details">
               <li data-i18n="exp3Desc1">Instrutora de informática para turmas de crianças e adolescentes em situação de vulnerabilidade social, ministrando aulas nos períodos da manhã e da tarde.</li>
               <li data-i18n="exp3Desc2">Ensino de informática básica, incluindo navegação na internet, uso do pacote Microsoft Office, gerenciamento de arquivos e boas práticas no uso do computador.</li>
               <li data-i18n="exp3Desc3">Planejamento e preparação de atividades didáticas adaptadas às diferentes faixas etárias.</li>
@@ -153,7 +155,7 @@
               <li data-i18n="exp3Desc7">Atendimento aos usuários, prestando suporte e orientação sobre o uso de recursos tecnológicos.</li>
               <li data-i18n="exp3Desc8">Desenvolvimento de habilidades de comunicação, didática, resolução de problemas e atendimento ao usuário.</li>
             </ul>
-            <button class="exp-toggle" type="button" aria-expanded="false" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
+            <button class="exp-toggle" type="button" aria-expanded="false" aria-controls="exp3-details" data-i18n-more="toggleMore" data-i18n-less="toggleLess">Ver mais</button>
           </article>
         </div>
       </section>
