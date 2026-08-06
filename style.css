@@ -356,7 +356,7 @@ main {
 }
 
 .exp-card {
-  cursor: default;
+  cursor: pointer;
 }
 
 .exp-card:hover,
@@ -416,14 +416,6 @@ main {
   max-height: none;
 }
 
-.exp-card-basf:not(.expanded) .exp-list {
-  max-height: none;
-}
-
-.exp-card-basf:not(.expanded) .exp-list li:not(.role-milestone) {
-  display: none;
-}
-
 .exp-list li {
   position: relative;
   margin: 0.75rem 0;
@@ -440,44 +432,6 @@ main {
   border-radius: 999px;
   background: radial-gradient(circle at top left, rgba(96, 165, 250, 0.95), rgba(30, 58, 138, 0.9));
   border: 1px solid var(--accent);
-}
-
-.exp-list .role-milestone {
-  margin: 0.9rem 0;
-  padding: 0.75rem 0.9rem 0.75rem 2.35rem;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  border-radius: 0.8rem;
-  background: rgba(30, 58, 138, 0.08);
-  color: var(--text);
-}
-
-.exp-list .role-milestone::before {
-  left: 0.9rem;
-  top: 1.18rem;
-  width: 0.58rem;
-  height: 0.58rem;
-  border-radius: 50%;
-  transform: none;
-}
-
-.exp-list .role-milestone-current::before {
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.16);
-  transform: none;
-  animation: current-role-pulse 1.8s ease-out infinite;
-}
-
-@keyframes current-role-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.5); }
-  70%, 100% { box-shadow: 0 0 0 8px rgba(96, 165, 250, 0); }
-}
-
-.exp-card-basf { order: -2; }
-.exp-card-current { order: -1; }
-
-@media (prefers-reduced-motion: reduce) {
-  .exp-list .role-milestone-current::before { animation: none; }
 }
 
 .exp-toggle {

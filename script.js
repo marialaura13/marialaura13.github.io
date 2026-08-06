@@ -26,7 +26,7 @@
     sectionExperienceLead: "Uma visão objetiva das minhas experiências, entregas e aprendizados profissionais.",
     exp1Period: "2022 – Atual",
     exp1Company: "Fatecoins (alocada na BASF)",
-    exp1Role: "Analista de Sistemas",
+    exp1Role: "Engenheira de software",
     exp1Desc1: "Desenvolvimento de soluções para Transformação Digital e Automação de Processos Industriais.",
     exp1Desc2: "Levantamento de requisitos, mapeamento de processos e visitas a plantas produtivas para entendimento da operação.",
     exp1Desc3: "Planejamento de projetos, criação e refinamento de Product Backlog e gestão de demandas.",
@@ -45,11 +45,9 @@
     exp1Desc16: "Apresentação de resultados e soluções para stakeholders e gerência.",
     exp1Desc17: "Atuação em projetos internacionais, colaborando com equipes multiculturais.",
     exp1Desc18: "Experiência em ambiente de Manufatura Inteligente (Smart Manufacturing) na indústria química global BASF.",
-    exp2Period: "2021 – Atual",
+    exp2Period: "2021 – 2022",
     exp2Company: "BASF",
-    exp2Role: "Trajetória na BASF",
-    exp2StageIntern: "2021 – 2022 · Estagiária de projetos",
-    exp2StageCurrent: "2022 – Atual · Analista de Sistemas pela Fatecoins, alocada na BASF",
+    exp2Role: "Estagiária de projetos",
     exp2Desc1: "Apoio em projetos de Transformação Digital e Automação de Processos Industriais.",
     exp2Desc2: "Desenvolvimento de soluções voltadas à Indústria 4.0 e digitalização de operações.",
     exp2Desc3: "Levantamento de requisitos e entendimento de processos junto aos usuários.",
@@ -194,7 +192,7 @@
     sectionExperienceLead: "A clear overview of my professional experience, key contributions, and continuous learning.",
     exp1Period: "2022 – Present",
     exp1Company: "Fatecoins (assigned to BASF)",
-    exp1Role: "Systems Analyst",
+    exp1Role: "Software Engineer",
     exp1Desc1: "Development of solutions for Digital Transformation and Industrial Process Automation.",
     exp1Desc2: "Requirements gathering, process mapping and factory visits to understand operations.",
     exp1Desc3: "Project planning, Product Backlog creation and refinement, and demand management.",
@@ -213,11 +211,9 @@
     exp1Desc16: "Presentation of results and solutions to stakeholders and management.",
     exp1Desc17: "Work on international projects in collaboration with multicultural teams.",
     exp1Desc18: "Experience in a Smart Manufacturing environment at BASF, a global chemical company.",
-    exp2Period: "2021 – Present",
+    exp2Period: "2021 – 2022",
     exp2Company: "BASF",
-    exp2Role: "Career journey at BASF",
-    exp2StageIntern: "2021 – 2022 · Project Intern",
-    exp2StageCurrent: "2022 – Present · Systems Analyst at Fatecoins, assigned to BASF",
+    exp2Role: "Project Intern",
     exp2Desc1: "Support for Digital Transformation and Industrial Process Automation projects.",
     exp2Desc2: "Development of Industry 4.0 solutions and operations digitization.",
     exp2Desc3: "Requirements gathering and process understanding with end users.",
@@ -407,6 +403,7 @@ const closeNav = () => {
 const toggleCard = (card) => {
   const toggle = card.querySelector(".exp-toggle");
   const expanded = card.classList.toggle("expanded");
+  card.setAttribute("aria-expanded", expanded ? "true" : "false");
   toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
   const lang = getSavedLanguage();
   toggle.textContent = translations[lang][expanded ? "toggleLess" : "toggleMore"];
@@ -426,7 +423,20 @@ expCards.forEach((card) => {
   if (!toggle) return;
 
   toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
     toggleCard(card);
+  });
+
+  card.addEventListener("click", (event) => {
+    if (event.target === toggle) return;
+    toggleCard(card);
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleCard(card);
+    }
   });
 });
 
